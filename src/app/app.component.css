@@ -1,0 +1,25 @@
+
+table {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 500px;
+}
+a{
+  text-decoration: none !important;
+  color: black !important;
+  position: relative;
+}
+a:hover{
+  background-color: bisque !important;
+  border-radius: 40px;
+}
+.feature{
+text-align: center;
+font-weight: 700;
+ width: 100%;
+}
+.map{
+  text-align: center;
+  margin-top: 20px
+}

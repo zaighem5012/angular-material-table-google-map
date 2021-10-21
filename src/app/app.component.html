@@ -1,0 +1,43 @@
+<main style="width: 100%;">
+<h1 class="feature">Feature 1 - Display WordPress Posts</h1>
+<table mat-table [dataSource]="posts" class="mat-elevation-z8" style="width:1120; height:450px">
+
+  <!-- Id Column -->
+  <ng-container matColumnDef="Id">
+    <th mat-header-cell *matHeaderCellDef> Id</th>
+    <td mat-cell *matCellDef="let element"><a  href="{{element.guid.rendered}}">  {{element.id}}</a> </td>
+  </ng-container>
+
+  <!-- status Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef> status </th>
+    <td mat-cell *matCellDef="let element"> <a href="{{element.guid.rendered}}">{{element.status}}</a> </td>
+  </ng-container>
+  <!-- title Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> title </th>
+    <td mat-cell *matCellDef="let element"> <a href="{{element.guid.rendered}}">{{element.title.rendered}}</a> </td>
+  </ng-container>
+
+  <!-- date Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> date </th>
+    <td mat-cell *matCellDef="let element"> <a href="{{element.guid.rendered}}">{{element.date}}</a> </td>
+  </ng-container>
+  <!-- slug Column -->
+  <ng-container matColumnDef="slug">
+    <th mat-header-cell *matHeaderCellDef> slug </th>
+    <td mat-cell *matCellDef="let element"> <a href="{{element.guid.rendered}}">{{element.slug}}</a>   </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+<div class="map">
+<h1 class="feature">Feature 2 - Google Maps Integration</h1>
+<input  type="text" #addresstext style="text-align: center;">
+<div #gmap style="width:1120;height:450px;">
+</div>
+</div>
+</main>
